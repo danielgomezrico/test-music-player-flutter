@@ -4,10 +4,12 @@ import 'package:music_player/bloc/model_bloc.dart';
 import 'package:music_player/pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // Root of the application.
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
         create: (context) => MusicBloc(),
-        child: HomePage(),
+        child: const HomePage(),
       ),
     );
   }
